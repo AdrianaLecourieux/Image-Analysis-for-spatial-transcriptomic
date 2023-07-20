@@ -1,4 +1,4 @@
-# Image-Analysis-for-spatial-transcriptomic
+# Image Analysis for spatial transcriptomic
 
 This repository contains all the scripts I realized during my end-of-studies internship at Servier Institut (6 months). I worked on images and data from spatial transcriptomic experiments (Visium 10X Genomics).
 
