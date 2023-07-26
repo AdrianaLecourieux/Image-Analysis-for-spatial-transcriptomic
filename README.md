@@ -8,9 +8,21 @@ Spatial transcriptomic (ST) is a method which allows to quantify the number of t
 ## Project structure
 
 Four directories are present in the repository and three of them contains notebooks :
-- **analysis** : contains tools or methods I used for my project
-- **tests** : contains tools or methods that I tested but did not use for my project
-- **other** : containes one script which convert h5 data to H5AD format and one scrit which normalize H&E images
-- **src** : contains the bibliography I did during my internship (ST, image analysis, methods)
+- 🔴 **analysis** : contains tools or methods I used for my project
+    - **ST_data_analysis** : three notebooks about ST data analysis from GraphST clusters (Identification of spatial domains, Higlhy variable genes, Venn diagrams)
+    - **dimensionality_reduction** : three notebooks about dimensionality reduction of ST data (NMF & PCA, Autoencoder, Variational Autoencoder)
+    - *ARI.ipynb* : Clustering methods on the combinaison of the both modalities (morphological features and ST data in reduced dimension). And ARI score calcule between clusters and ground truth on DLPFC dataset
+    - *Random_forest.ipynb* : Identification of important features for a model (morphological features and ST data in reduced dimension)
+    - *merged_DR_morpho_features.ipynb* : this script merged morphological features dataframe to ST data in reduced dimension dataframe
+    - *nuclei_assignement_to_spot* : From visiopharm ouptut (cell nuclei morphological features), assigned the cell to Visium spot (of the same sample)
+    - *pre_processing_kmeans_visiopharm.ipynb* : this script preprocess visiopharm outputs
+- :yellow_circle: **tests** : contains tools or methods that I tested but did not use for my project
+    - **ID_spatial_domains** : containes one test of using DBSCAN to identify spatial domains and one test of stLearn
+    - **deconvolution** : test of ST data deconvolution with Cell2location and GraphST
+    - **graphs** : Explore graphs for H&E image analysis (Delaunay triangulation, Voronoï diagrams, Networkx, communities)
+    - **image_preprocessing** : Before using visiopharm to extract morphological features of H&E images, we tried other methods ("manual" method, kmeans, ward, watershed, MST)
+    - **segmentation** : test of segmentation methods (xFuse, CellPose, Squidpy)
+- :large_blue_circle: **other** : containes one script which convert h5 data to H5AD format and one scrit which normalize H&E images
+- :green_circle: **src** : contains the bibliography I did during my internship (ST, image analysis, methods)
 
  
